@@ -1,0 +1,196 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+html{
+  font-size: 0.9375rem;
+}
+/* Desktop Version */
+body{
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family:'League Spartan', sans-serif;
+  position: relative;
+}
+p,
+h1,
+h2,
+figure{
+  margin: 0;
+}
+.bg-pattern-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+}
+.bg-pattern-bottom{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70%;
+}
+.main-container{
+  width: min(100%, 1150px);
+}
+.parent-container{
+  width: 100%;
+  padding: 0 3em;
+}
+.content-container{
+  width: 100%;
+  padding: 2.5em 0;
+  display: flex;
+  align-items: center;
+}
+.header-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 90%;
+}
+#header{
+  width: 80%;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+#header-paragraph{
+  width: 80%;
+  padding: 1em 0;
+  font-weight: 500;
+  line-height: 1.5;
+  color: hsl(303, 10%, 53%);
+}
+.rating-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+}
+.rating-position--1, 
+.rating-position--2, 
+.rating-position--3{
+  position: relative;
+  width: 70%;
+}
+.rating-position--1{
+  right: 5em;
+}
+.rating-position--2{
+  right: 2.5em;
+}
+.rating{
+  margin: .5em 0;
+  padding: 1em;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: hsl(300, 24%, 96%);
+}
+.rate-detail{
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(300, 43%, 22%);
+}
+.review-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  column-gap: 2.5%;
+  padding: 1.5em 0;
+}
+.review--1,
+.review--2,
+.review--3{
+  position: relative;
+  width: 100%;
+  padding: 1.5em 1.5em 2em;
+  background: hsl(300, 43%, 22%);
+  border-radius: 8px;
+}
+.review--1{
+  bottom: 1em;
+}
+.review--3{
+  top: 1em;
+}
+.user-container{
+  padding: .8em 0;
+  display: flex;
+  align-items: center;
+
+}
+.user-info-container{
+  padding: 0 1.2em;
+}
+.user-avatar{
+  width: 40px;
+  border-radius: 20px;
+}
+.user-name{
+  padding-bottom: .35em;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.user-type{
+  color: hsl(333, 80%, 67%);
+}
+.user-review{
+  padding: .5em 0 0;
+  line-height: 1.5;
+  color: hsl(0, 0%, 100%);
+}
+/* Tablet Version */
+@media(max-width: 960px){
+  .bg-pattern-top{
+    width: 60%;
+  }
+  .rating-position--1, 
+  .rating-position--2, 
+  .rating-position--3{
+    position: static;
+    width: 100%;
+}
+  .rating{
+    width: 100%;
+    padding: 1em 0;
+  }
+}
+/* Mobile Version */
+@media(max-width: 650px){
+  .parent-container{
+    padding: 2.5em 1.5em;
+  }
+  .content-container{
+    flex-direction: column;
+  }
+  .bg-pattern-top{
+    width: 100%;
+  }
+  .bg-pattern-bottom{
+    width: 100%;
+  }
+  #header{
+    font-size: 2.5em;
+    width: 80%;
+    line-height: .8;
+  }
+  #header-paragraph{
+    width: 100%;
+  }
+  .header-container{
+    width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+  .rating, .review-container{
+    flex-direction: column;
+  }
+  .rate-detail{
+    padding-top: .8em;
+  }
+}
